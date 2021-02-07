@@ -1,26 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Appbar from './components/AppBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         TRY WITH BRANCHING
-        </p>
-        <h1>EDITED THE 2ND TIME</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <CssBaseline />
+        <Appbar />
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
