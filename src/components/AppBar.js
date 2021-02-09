@@ -29,7 +29,7 @@ import Orders from '../Pages/Orders';
 import Notifications from "../Pages/Notifications";
 import Admin from '../Pages/Admin';
 import Staff from '../Pages/Staff';
-import Users from '../Pages/Users';
+import Users from '../Pages/Users/Users';
 
 
 
