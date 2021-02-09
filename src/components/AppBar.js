@@ -34,19 +34,23 @@ import Admin from '../Pages/Admin';
 import Staff from '../Pages/Staff';
 import Users from '../Pages/Users';
 
+
+
 const drawerWidth = 240;
 const history = createBrowserHistory();
 
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    backgroundColor: "whitesmoke"
   },
   flex: {
     flex: 1
   },
   drawerPaper: {
     position: "relative",
-    width: drawerWidth
+    width: drawerWidth,
+    backgroundColor: "#ffffff"
   },
   menuButton: {
     marginLeft: -12,
@@ -55,13 +59,18 @@ const styles = theme => ({
   toolbarMargin: theme.mixins.toolbar,
   aboveDrawer: {
     zIndex: theme.zIndex.drawer + 1
-  }
+  },
+  aboveDrawer : {
+    backgroundColor: "#ffffff",
+    color: "#fb9937"
+  },
 });
 
 const MyToolbar = withStyles(styles)(
   ({ classes, title, onMenuClick }) => (
     <Fragment>
-      <AppBar className={classes.aboveDrawer}>
+      <AppBar className={classes.aboveDrawer}
+      >
         <Toolbar>
           <IconButton
             className={classes.menuButton}
@@ -104,19 +113,17 @@ const MyDrawer = withStyles(styles)(
       />
        <br></br>
       <List>
-          
         <ListItem button component={Link} to="/" onClick={onItemClick('Home')}>
         <ListItemIcon>
             <DashboardIcon/>
         </ListItemIcon>
-          <ListItemText>Home</ListItemText>
+          <ListItemText   >Home</ListItemText>
         </ListItem>
         <ListItem button component={Link} to="/Menu" onClick={onItemClick('Menu')}>
         <ListItemIcon>
             <MenuBookIcon/>
         </ListItemIcon>
-          <ListItemText>Menu</ListItemText>
-              
+          <ListItemText>Menu</ListItemText> 
         </ListItem>
         <ListItem button component={Link} to="/Orders" onClick={onItemClick('Orders')}>
         <ListItemIcon>
@@ -130,7 +137,7 @@ const MyDrawer = withStyles(styles)(
         </ListItemIcon>
           <ListItemText>Notifications</ListItemText>
         </ListItem>
-      </List>
+    
       <Divider/>
       <ListItem button component={Link} to="/Admin" onClick={onItemClick('Admin')}>
         <ListItemIcon>
@@ -150,6 +157,7 @@ const MyDrawer = withStyles(styles)(
         </ListItemIcon>
           <ListItemText>Users</ListItemText>
         </ListItem>
+        </List>
      
      
     </Drawer>
@@ -157,7 +165,7 @@ const MyDrawer = withStyles(styles)(
         <Route exact path="/" component={Home} />
         <Route path="/Menu" component={Menu} />
         <Route path="/Orders" component={Orders} />
-        <Route path="/Notification" component={Notifications} />
+        <Route path="/Notifications" component={Notifications} />
         <Route path="/Admin" component={Admin} />
         <Route path="/Staff" component={Staff} />
         <Route path="/Users" component={Users} />
