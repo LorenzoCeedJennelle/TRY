@@ -1,3 +1,4 @@
+/*https://github.com/gregnb/mui-datatables*/ 
 import MUIDataTable from "mui-datatables";
 
 const Users = () => {
@@ -13,6 +14,7 @@ const Users = () => {
 
 const options = {
   filterType: 'checkbox',
+  
 };
     return (
         <div>
