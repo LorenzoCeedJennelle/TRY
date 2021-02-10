@@ -1,6 +1,6 @@
 /*https://github.com/gregnb/mui-datatables*/ 
 import MUIDataTable from "mui-datatables";
-
+import Container from '@material-ui/core/Container';
 const Users = () => {
 
     const columns = ["Name", "Company", "City", "State"];
@@ -18,12 +18,15 @@ const options = {
 };
     return (
         <div>
-            <MUIDataTable
-  title={"Users List"}
-  data={data}
-  columns={columns}
-  options={options}
-/>
+            <Container fixed style= {{marginTop : '1rem'}}>
+                <MUIDataTable
+                title={"Users List"}
+                data={data}
+                columns={columns}
+                options={options}
+                />
+
+            </Container>
         </div>
       );
 }

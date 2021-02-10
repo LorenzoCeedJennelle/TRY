@@ -1,10 +1,22 @@
 /*https://material-table.com/#/docs/get-started - LINK FOR MATERIAL-TABLE*/ 
 import MaterialTable from 'material-table';
 import React from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
 const Staff = () => {
 
     const { useState } = React;
+    const theme = createMuiTheme({
+      palette: {
+        primary: {
+          main: '#4caf50',
+        },
+        secondary: {
+          main: '#ff9100',
+        },
+      },
+    });
 
   const [columns, setColumns] = useState([
     {
@@ -32,6 +44,8 @@ const Staff = () => {
   ]);
 
   return (
+    <MuiThemeProvider theme={theme}>
+      <Container fixed style= {{marginTop : '1rem'}}>
     <MaterialTable
       title="Users"
       columns={columns}
@@ -74,6 +88,8 @@ const Staff = () => {
       }}
     
     />  
+    </Container>
+    </MuiThemeProvider>
   )
 }
  
