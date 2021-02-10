@@ -6,9 +6,19 @@ import { Divider } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 
 import Select from '@material-ui/core/Select';
-import NativeSelect from '@material-ui/core/NativeSelect';
+
 
 const Users = () => {
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     const [state, setState] = React.useState({
         age: '',
@@ -51,6 +61,7 @@ const Users = () => {
     filterType: 'checkbox',
     
     };
+
     return (
         <div>
 
