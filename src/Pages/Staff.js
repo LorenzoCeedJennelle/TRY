@@ -1,5 +1,5 @@
 /*https://material-table.com/#/docs/get-started - LINK FOR MATERIAL-TABLE*/ 
-import MaterialTable from 'material-table';
+import MaterialTable from 'material-table'; // can be used in Orders.js
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
