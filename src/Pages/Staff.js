@@ -16,7 +16,7 @@ const Staff = () => {
           main: '#ff9100',
         },
       },
-    });
+    },);
 
   const [columns, setColumns] = useState([
     {
@@ -84,7 +84,8 @@ const Staff = () => {
       }}
       options={{
           filtering: true,
-          grouping: true
+          grouping: true,
+          exportButton: true
       }}
     
     />  
