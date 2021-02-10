@@ -73,7 +73,7 @@ const Staff = () => {
           grouping: true
       }}
     
-    />
+    />  
   )
 }
  
